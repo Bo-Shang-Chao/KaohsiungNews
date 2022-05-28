@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		8E2500022827628D008BD67E /* KaohsiungNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2500012827628D008BD67E /* KaohsiungNewsUITests.swift */; };
 		8E2500042827628D008BD67E /* KaohsiungNewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2500032827628D008BD67E /* KaohsiungNewsUITestsLaunchTests.swift */; };
+		8E250011282763A6008BD67E /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E250010282763A6008BD67E /* NewsListTableViewController.swift */; };
+		8E25001528276701008BD67E /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25001428276701008BD67E /* Webservice.swift */; };
+		8E25001828276BF5008BD67E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25001728276BF5008BD67E /* Article.swift */; };
+		8E25001B28277F4F008BD67E /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25001A28277F4F008BD67E /* ArticleViewModel.swift */; };
+		8E25001E28278449008BD67E /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25001D28278449008BD67E /* ArticleTableViewCell.swift */; };
+		8E2500212827AAF8008BD67E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2500202827AAF8008BD67E /* UIImage+Extension.swift */; };
 		8E25FFE128276288008BD67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25FFE028276288008BD67E /* AppDelegate.swift */; };
 		8E25FFE328276288008BD67E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25FFE228276288008BD67E /* SceneDelegate.swift */; };
-		8E25FFE528276288008BD67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25FFE428276288008BD67E /* ViewController.swift */; };
 		8E25FFE828276288008BD67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E25FFE628276288008BD67E /* Main.storyboard */; };
 		8E25FFEA2827628D008BD67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E25FFE92827628D008BD67E /* Assets.xcassets */; };
 		8E25FFED2827628D008BD67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E25FFEB2827628D008BD67E /* LaunchScreen.storyboard */; };
@@ -38,10 +43,15 @@
 /* Begin PBXFileReference section */
 		8E2500012827628D008BD67E /* KaohsiungNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaohsiungNewsUITests.swift; sourceTree = "<group>"; };
 		8E2500032827628D008BD67E /* KaohsiungNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaohsiungNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E250010282763A6008BD67E /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
+		8E25001428276701008BD67E /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		8E25001728276BF5008BD67E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		8E25001A28277F4F008BD67E /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		8E25001D28278449008BD67E /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		8E2500202827AAF8008BD67E /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		8E25FFDD28276288008BD67E /* KaohsiungNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaohsiungNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E25FFE028276288008BD67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E25FFE228276288008BD67E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E25FFE428276288008BD67E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E25FFE728276288008BD67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E25FFE92827628D008BD67E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E25FFEC2827628D008BD67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +95,54 @@
 			path = KaohsiungNewsUITests;
 			sourceTree = "<group>";
 		};
+		8E250012282763C0008BD67E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E250010282763A6008BD67E /* NewsListTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8E250013282766E0008BD67E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8E25001428276701008BD67E /* Webservice.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8E25001628276BC3008BD67E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E25001728276BF5008BD67E /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E25001928277F2F008BD67E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8E25001A28277F4F008BD67E /* ArticleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8E25001C28278431008BD67E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8E25001D28278449008BD67E /* ArticleTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8E25001F2827AAC6008BD67E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E2500202827AAF8008BD67E /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8E25FFD428276288008BD67E = {
 			isa = PBXGroup;
 			children = (
@@ -108,9 +166,14 @@
 		8E25FFDF28276288008BD67E /* KaohsiungNews */ = {
 			isa = PBXGroup;
 			children = (
+				8E25001F2827AAC6008BD67E /* Extensions */,
+				8E25001C28278431008BD67E /* Cells */,
+				8E25001928277F2F008BD67E /* ViewModels */,
+				8E25001628276BC3008BD67E /* Models */,
+				8E250013282766E0008BD67E /* Services */,
+				8E250012282763C0008BD67E /* Controllers */,
 				8E25FFE028276288008BD67E /* AppDelegate.swift */,
 				8E25FFE228276288008BD67E /* SceneDelegate.swift */,
-				8E25FFE428276288008BD67E /* ViewController.swift */,
 				8E25FFE628276288008BD67E /* Main.storyboard */,
 				8E25FFE92827628D008BD67E /* Assets.xcassets */,
 				8E25FFEB2827628D008BD67E /* LaunchScreen.storyboard */,
@@ -258,9 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E25FFE528276288008BD67E /* ViewController.swift in Sources */,
 				8E25FFE128276288008BD67E /* AppDelegate.swift in Sources */,
+				8E250011282763A6008BD67E /* NewsListTableViewController.swift in Sources */,
+				8E25001528276701008BD67E /* Webservice.swift in Sources */,
+				8E2500212827AAF8008BD67E /* UIImage+Extension.swift in Sources */,
+				8E25001B28277F4F008BD67E /* ArticleViewModel.swift in Sources */,
 				8E25FFE328276288008BD67E /* SceneDelegate.swift in Sources */,
+				8E25001E28278449008BD67E /* ArticleTableViewCell.swift in Sources */,
+				8E25001828276BF5008BD67E /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +510,7 @@
 				DEVELOPMENT_TEAM = YQ88N3YLMB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KaohsiungNews/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "高雄新聞";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -470,6 +539,7 @@
 				DEVELOPMENT_TEAM = YQ88N3YLMB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KaohsiungNews/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "高雄新聞";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
