@@ -13,7 +13,7 @@ struct ArticleListViewModel {
 }
 
 extension ArticleListViewModel {
-    init(_ articles: [Article]){
+    init(_ articles: [Article]) {
         self.articles = articles
     }
 }
@@ -22,11 +22,11 @@ extension ArticleListViewModel {
     var numberOfSection: Int {
         return 1
     }
-    
+
     func numberOfRowInSection(_ section: Int) -> Int {
         return self.articles.count
     }
-    
+
     func articleAtIndex(_ index: Int) -> ArticleViewModel {
         let article = self.articles[index]
         return ArticleViewModel(article)
@@ -38,7 +38,7 @@ struct ArticleViewModel {
 }
 
 extension ArticleViewModel {
-    init(_ article: Article){
+    init(_ article: Article) {
         self.article = article
     }
 }
@@ -47,20 +47,19 @@ extension ArticleViewModel {
     var title: String {
         return self.article.title!
     }
-    
+
     var description: String {
         return self.article.description!
     }
-    
+
     /// Set Image from URL
     /// - Parameter completion: UIImage Type
     func image(completion: @escaping (UIImage?) -> Void) {
-        
         guard let imageURL = article.urlToImage else {
             completion(UIImage.imageForPlaceHolder())
             return
         }
-        
+
         UIImage.image(url: imageURL) { image in
             DispatchQueue.main.async {
                 completion(image)
