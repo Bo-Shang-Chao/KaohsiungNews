@@ -19,6 +19,8 @@ class Webservice {
                 if let articleList = articleList {
                     print(articleList.articles)
                     completion(articleList.articles)
+                } else {
+                    completion(nil)
                 }
             }
         }.resume()
