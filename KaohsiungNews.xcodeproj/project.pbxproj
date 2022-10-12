@@ -21,6 +21,10 @@
 		8E25FFEA2827628D008BD67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E25FFE92827628D008BD67E /* Assets.xcassets */; };
 		8E25FFED2827628D008BD67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E25FFEB2827628D008BD67E /* LaunchScreen.storyboard */; };
 		8E25FFF82827628D008BD67E /* KaohsiungNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25FFF72827628D008BD67E /* KaohsiungNewsTests.swift */; };
+		8E8CE60928F6D488000D2DD7 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8CE60828F6D488000D2DD7 /* NetworkResponse.swift */; };
+		8E8CE60B28F6D49E000D2DD7 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8CE60A28F6D49E000D2DD7 /* NetworkResult.swift */; };
+		8E8CE60D28F6D4BC000D2DD7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8CE60C28F6D4BC000D2DD7 /* NetworkError.swift */; };
+		8E8CE60F28F6D4CF000D2DD7 /* HTTPURLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8CE60E28F6D4CF000D2DD7 /* HTTPURLResponse+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		8E25FFF32827628D008BD67E /* KaohsiungNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaohsiungNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E25FFF72827628D008BD67E /* KaohsiungNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaohsiungNewsTests.swift; sourceTree = "<group>"; };
 		8E25FFFD2827628D008BD67E /* KaohsiungNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaohsiungNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E8CE60828F6D488000D2DD7 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		8E8CE60A28F6D49E000D2DD7 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		8E8CE60C28F6D4BC000D2DD7 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		8E8CE60E28F6D4CF000D2DD7 /* HTTPURLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 		8E250013282766E0008BD67E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8E8CE60728F6D466000D2DD7 /* NetworkManager */,
 				8E25001428276701008BD67E /* Webservice.swift */,
 			);
 			path = Services;
@@ -188,6 +197,17 @@
 				8E25FFF72827628D008BD67E /* KaohsiungNewsTests.swift */,
 			);
 			path = KaohsiungNewsTests;
+			sourceTree = "<group>";
+		};
+		8E8CE60728F6D466000D2DD7 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				8E8CE60828F6D488000D2DD7 /* NetworkResponse.swift */,
+				8E8CE60A28F6D49E000D2DD7 /* NetworkResult.swift */,
+				8E8CE60C28F6D4BC000D2DD7 /* NetworkError.swift */,
+				8E8CE60E28F6D4CF000D2DD7 /* HTTPURLResponse+Extension.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,12 +342,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E25FFE128276288008BD67E /* AppDelegate.swift in Sources */,
+				8E8CE60B28F6D49E000D2DD7 /* NetworkResult.swift in Sources */,
 				8E250011282763A6008BD67E /* NewsListTableViewController.swift in Sources */,
 				8E25001528276701008BD67E /* Webservice.swift in Sources */,
+				8E8CE60F28F6D4CF000D2DD7 /* HTTPURLResponse+Extension.swift in Sources */,
 				8E2500212827AAF8008BD67E /* UIImage+Extension.swift in Sources */,
 				8E25001B28277F4F008BD67E /* ArticleViewModel.swift in Sources */,
+				8E8CE60928F6D488000D2DD7 /* NetworkResponse.swift in Sources */,
 				8E25FFE328276288008BD67E /* SceneDelegate.swift in Sources */,
 				8E25001E28278449008BD67E /* ArticleTableViewCell.swift in Sources */,
+				8E8CE60D28F6D4BC000D2DD7 /* NetworkError.swift in Sources */,
 				8E25001828276BF5008BD67E /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

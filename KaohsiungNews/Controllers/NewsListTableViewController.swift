@@ -20,14 +20,19 @@ class NewsListTableViewController : UITableViewController {
     private func setup() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.backgroundColor = .gray
-        let url = URL(string: "https://newsapi.org/v2/everything?q=%E9%AB%98%E9%9B%84&language=zh&sortBy=publishedAt&apiKey=d35766c79dc843c3b5f711250ce0a5c9")!
-        Webservice().getArticles(url: url) { articles in
-            if let articles = articles {
-                self.articleListVM = ArticleListViewModel(articles)
+        
+        Webservice().load(resource: ArticleList.Kaohsiung) { [weak self] result in
+            
+            switch result {
+            case .success(let articleList):
+                self?.articleListVM = ArticleListViewModel(articleList.articles)
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
+            case .failure(let error):
+                print(error)
             }
+            
         }
     }
     
