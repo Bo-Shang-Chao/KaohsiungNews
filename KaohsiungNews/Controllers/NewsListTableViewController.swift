@@ -17,11 +17,16 @@ class NewsListTableViewController : UITableViewController {
         setup()
     }
     
-    private func setup() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.backgroundColor = .gray
-        
-        Webservice().load(resource: ArticleList.Kaohsiung) { [weak self] result in
+    func setTheme(_ themeVM: ThemeViewModel) {
+        self.title = themeVM.title
+        guard let resource = themeVM.resource else {
+            fatalError("Resource is incorrect!")
+        }
+        self.loadNewsData(newsResource: resource)
+    }
+    
+    func loadNewsData(newsResource: Resource<ArticleList>) {
+        Webservice().load(resource: newsResource) { [weak self] result in
             
             switch result {
             case .success(let articleList):
@@ -32,8 +37,15 @@ class NewsListTableViewController : UITableViewController {
             case .failure(let error):
                 print(error)
             }
-            
         }
+    }
+    
+    private func setup() {
+        
+    }
+    
+    @IBAction func close() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

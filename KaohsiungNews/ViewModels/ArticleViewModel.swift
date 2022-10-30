@@ -49,7 +49,10 @@ extension ArticleViewModel {
     }
 
     var description: String {
-        return self.article.description!
+        guard let description = self.article.description else {
+            return ""
+        }
+        return description
     }
 
     /// Set Image from URL
