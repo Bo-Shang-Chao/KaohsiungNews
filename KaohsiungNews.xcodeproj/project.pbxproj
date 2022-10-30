@@ -148,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2500202827AAF8008BD67E /* UIImage+Extension.swift */,
+				8EC97C3328FFFE6200DE7A86 /* URL+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +176,8 @@
 		8E25FFDF28276288008BD67E /* KaohsiungNews */ = {
 			isa = PBXGroup;
 			children = (
+				8EC97C2E28FFF0D200DE7A86 /* System */,
+				8EC97C2928FFD69C00DE7A86 /* API */,
 				8E25001F2827AAC6008BD67E /* Extensions */,
 				8E25001C28278431008BD67E /* Cells */,
 				8E25001928277F2F008BD67E /* ViewModels */,
@@ -208,6 +211,25 @@
 				8E8CE60E28F6D4CF000D2DD7 /* HTTPURLResponse+Extension.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		8EC97C2928FFD69C00DE7A86 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8EC97C2A28FFD6B700DE7A86 /* EndPoints.swift */,
+				8EC97C3128FFF3D700DE7A86 /* Parameter.swift */,
+				8EC97C2C28FFEFE600DE7A86 /* NewsApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8EC97C2E28FFF0D200DE7A86 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				8EC97C2F28FFF0FE00DE7A86 /* Environment.swift */,
+				8E1165B629094D28007C8360 /* Themes.plist */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,12 +363,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC97C2D28FFEFE600DE7A86 /* NewsApi.swift in Sources */,
 				8E25FFE128276288008BD67E /* AppDelegate.swift in Sources */,
 				8E8CE60B28F6D49E000D2DD7 /* NetworkResult.swift in Sources */,
+				8EC97C3428FFFE6200DE7A86 /* URL+Extension.swift in Sources */,
 				8E250011282763A6008BD67E /* NewsListTableViewController.swift in Sources */,
 				8E25001528276701008BD67E /* Webservice.swift in Sources */,
 				8E8CE60F28F6D4CF000D2DD7 /* HTTPURLResponse+Extension.swift in Sources */,
 				8E2500212827AAF8008BD67E /* UIImage+Extension.swift in Sources */,
+				8EC97C3228FFF3D700DE7A86 /* Parameter.swift in Sources */,
+				8EC97C2B28FFD6B700DE7A86 /* EndPoints.swift in Sources */,
 				8E25001B28277F4F008BD67E /* ArticleViewModel.swift in Sources */,
 				8E8CE60928F6D488000D2DD7 /* NetworkResponse.swift in Sources */,
 				8E25FFE328276288008BD67E /* SceneDelegate.swift in Sources */,
